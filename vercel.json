@@ -1,15 +1,13 @@
 {
-  "public": true,
   "functions": {
-    "api/**/*.[jt]s": {
-      "runtime": "vercel-deno@3.1.1",
-      "maxDuration": 5
+    "api/index.ts": {
+      "runtime": "vercel-deno@2.1.0"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/api/$1"
+      "src": "/(.*)",
+      "dest": "api/index.ts"
     }
   ]
 }
