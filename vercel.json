@@ -1,13 +1,11 @@
 {
-  "functions": {
-    "api/*.ts": {
-      "runtime": "vercel-deno@latest"
+  "installCommand": "curl -fsSL https://deno.land/x/install/install.sh | sh",
+  "build": {
+    "env": {
+      "DENO_VERSION": "1.x"
     }
   },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/index.ts"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "api/index.ts" }
   ]
 }
