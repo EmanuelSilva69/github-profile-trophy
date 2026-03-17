@@ -1,8 +1,7 @@
 {
-  "installCommand": "curl -fsSL https://deno.land/x/install/install.sh | sh",
-  "build": {
-    "env": {
-      "DENO_VERSION": "1.x"
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "deno"
     }
   },
   "rewrites": [
